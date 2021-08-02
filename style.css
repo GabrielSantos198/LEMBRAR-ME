@@ -6,6 +6,12 @@
 }
 
 
+::selection{
+  background-color: #000;
+  color: #fff;
+}
+
+
 .header-pag-inicial{
   background-color: #EFF0F1;
 }
@@ -13,9 +19,8 @@
 
 .header-pag-inicial .secao-login{
   padding-top: 80px;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 85%;
+  margin: 0 auto 0 auto;
   text-align: center;
 }
 
@@ -53,45 +58,251 @@
 }
 
 
-.header-pag-inicial .secao-login form .cadastro{
+.header-pag-inicial .secao-login .cadastro{
   color: blue;
   cursor: pointer; 
 }
 
 
-.header-pag-inicial .secao-login form ul{
+.header-pag-inicial .secao-login ul{
   width: 100%;
   margin-top: 40px;
 }
 
 
-.header-pag-inicial .secao-login form ul a{
+.header-pag-inicial .secao-login ul p{
+  padding-bottom: 15px;
+}
+
+
+.header-pag-inicial .secao-login ul a{
   background-color: #385499;
   border-radius: 4px;
-  height: 50px;
+  height: 55px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
-  margin-bottom: 20px;
   cursor: pointer;
 }
 
 
-.header-pag-inicial .secao-login form ul a img{
+.header-pag-inicial .secao-login ul a img{
   width: 30px;
   padding-right: 14px;
 }
 
 
-.header-pag-inicial .secao-login form ul .google{
-  background-color: #fff;
-  color: #000;
-  margin-bottom: 90px;
-}
-
-
-.header-pag-inicial .secao-login form ul .linkedin{
+.header-pag-inicial .secao-login ul .linkedin{
   background-color: #1E90FF;
 }
+
+
+.header-pag-inicial .secao-login ul .google{
+  background-color: #fff;
+  color: #000;
+}
+
+
+main{
+  background-color: #EFF0F1;
+  padding-top: 50px;
+}
+
+
+main .sobre-plataforma h2{
+  font-size: 24px;
+  text-align: center;
+  color: #000;
+  letter-spacing: 3px;
+}
+
+
+main .sobre-plataforma p{
+  width: 90%;
+  text-align: center;
+  margin: 0 auto 0 auto;
+  padding-top: 20px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  line-height: 25px;
+  padding-bottom: 70px;
+}
+
+
+main .cards{
+  width: 88%;  
+  margin: 0 auto 0 auto;
+}
+
+
+main .cards .card{
+  width: 100%; 
+  background-color: #FFFFFF;
+  height: 500px;
+  margin-bottom: 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-align: center;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  border-radius: 9px;
+}
+
+
+main .cards .card img{
+  width: 140px;
+  height: 140px;
+  background-color: purple;
+  margin-top: 40px;
+  border-radius: 50%;
+}
+
+
+main .cards .card img:hover{
+  box-shadow: 7px 7px 5px grey; 
+}
+
+
+main .cards .card h1{
+  font-size: 23px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+
+main .cards .card p{
+  width: 90%;
+  margin: 0 auto 0 auto;
+  line-height: 25px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+}
+
+
+main .desenvolvedor{
+  width: 85%;
+  margin: 80px auto 0 auto;
+  text-align: center;
+}
+
+
+main .desenvolvedor p{
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  line-height: 25px;
+}
+
+
+main .desenvolvedor img{
+  width: 150px;
+  height: 150px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 50%;
+}
+
+
+main .form-contato{
+  margin-top: 80px;
+  margin-bottom: 80px;
+  width: 100%;
+  background-image: url('imgs/background.jpg');
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+main .form-contato h1{
+  color: #fff;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 25px;
+  font-size: 30px;
+}
+
+
+main .form-contato form{
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+main .form-contato form input{
+  padding: 12px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+
+main .form-contato form textarea{
+  padding: 10px;
+}
+
+
+main .form-contato form .enviar{
+  margin-top: 25px;
+  background-color: green;
+  color: #fff;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.rodape-pag-inicial{
+  width: 100%;
+  background-color: grey;
+  margin-top: 150px;
+}
+
+
+.rodape-pag-inicial h4{
+  color: #fff;
+  padding-top: 25px;
+  text-align: center;
+  font-size: 25px;
+}
+
+
+.rodape-pag-inicial ul{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0 60px 0;
+}
+
+
+.rodape-pag-inicial ul a{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 30px;
+}
+
+
+.rodape-pag-inicial ul a:hover{
+  background-color: #2ecc71;
+  transform: rotate(26deg);
+  transition: 0.5s;
+}
+
+
+.rodape-pag-inicial p{
+  color: #fff;
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+
