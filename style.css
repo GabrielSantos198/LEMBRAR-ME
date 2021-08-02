@@ -6,6 +6,11 @@
 }
 
 
+html{
+  scroll-behavior: smooth;
+}
+
+
 ::selection{
   background-color: #000;
   color: #fff;
@@ -289,6 +294,7 @@ main .form-contato form .enviar{
   align-items: center;
   color: #000;
   font-size: 30px;
+  cursor: pointer;
 }
 
 
@@ -303,6 +309,55 @@ main .form-contato form .enviar{
   color: #fff;
   text-align: center;
   padding-bottom: 8px;
+}
+
+
+
+/* Verção PC */
+
+@media (min-width: 800px){
+  .header-pag-inicial .secao-login{
+    width: 60%;
+  }
+
+
+  main .sobre-plataforma p{
+    width: 85%;
+  }
+
+
+  main .cards{
+    display: flex;
+    justify-content: center;
+    width: 95%;
+  }
+
+
+  main .cards .card{
+    height: 600px;
+    width: 30%;
+  }
+
+
+  main .cards .card:nth-child(2){
+    margin: 0 24px 0 24px;
+  }
+
+
+  main .cards .card p{
+    width: 95%;
+    margin: 0 auto 0 auto;
+    line-height: 20px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+  }
+
+
+  main .form-contato form{
+    width: 60%;
+  }
+
+
 }
 
 
