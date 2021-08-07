@@ -212,7 +212,7 @@ main .form-contato{
   margin-top: 80px;
   margin-bottom: 80px;
   width: 100%;
-  background-image: url('imgs/background.jpg');
+  background-image: url('../imgs/background.jpg');
   background-attachment: fixed;
   background-position: center;
 }
@@ -359,5 +359,6 @@ main .form-contato form .enviar{
 
 
 }
+
 
 

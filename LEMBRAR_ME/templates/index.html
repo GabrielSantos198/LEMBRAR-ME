@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header class="header-pag-inicial">
+  <section class="secao-login">
+    <h1 class="logo">LEMBRAR-ME</h1>
+
+    <form>
+      <input type="text" required="required" placeholder=" Nome">
+      <input type="email" required="required" placeholder=" Email">
+      <input type="submit" value="Entrar" class="enviar">
+    </form>
+    <p>Não tem uma conta? <a class="cadastro" href="#">Cadastre-se</a></p>
+
+    <ul>
+      <p><a href="#"><img src="../static/imgs/facebook.png"> Facebook</a></p>
+      <p><a class="linkedin" href="#"><img src="../static/imgs/linkedin.png"> Linkedin</a></p>
+      <p><a class="google" href="#"><img src="../static/imgs/google.png"> Google</a></p>
+    </ul>
+  </section>
+</header> 
+
+<main>
+  <section class="sobre-plataforma">
+    <h2>PLATAFORMA</h2>
+    <p>A vida é cheia de compromissos e nem sempre conseguimos nos lembrar de todos, pensando nisso resolvi desenvolver a LEMBRAR-ME, uma plataforma online, segura e de código aberto, onde você pode facilmente criar lembretes de forma organizada, para que nunca mais venha a esquecer qualquer compromisso. E para melhor lhe atender sempre tenho buscado a inovação e o aperfeiçoamento da plataforma, além de também estar sempre disponível para tirar dúvidas e receber sugestões através das formas de contato <a href="#formulario">abaixo</a>.
+  </section>
+
+  <article class="cards">
+    <section class="card">
+      <article>
+        <img src="../static/imgs/privacidade.png" alt="imagem">
+        <h1>Privacidade</h1>
+        <p>A LEMBRAR-ME preza muito pela sua privacidade, por isso suas informações e tudo que for escrito aqui ficará só entre você e o servidor, ninguém mais terá acesso.</p>
+      </article>
+    </section>
+
+    <section class="card">
+      <article>
+        <img src="../static/imgs/praticidade.png" alt="imagem">
+        <h1>Praticidade</h1>
+        <p>Site com uma interface extremamente moderna e simples de ser usada. Basta se logar e começar a fazer suas anotações. Sem nenhuma complicação.</p>
+      </article>
+    </section>
+
+    <section class="card">
+      <article>
+        <img src="../static/imgs/bouncer.png" alt="imagem">
+        <h1>Segurança</h1>
+        <p>As melhores técnicas de segurança disponíveis no mercado foram utilizadas nessa plataforma. Não é atoa que muitos consideram segurança como sendo nosso nome do meio.</p>
+      </article>
+    </section>
+  </article>
+
+  <article class="desenvolvedor">
+    <h1>DESENVOLVEDOR</h1>
+    <img src="../static/imgs/bouncer.png" alt="imagem">
+    <p>Ola 👋, meu nome é <i>Gabriel Santana</i>, eu sou um visionário e filantrópico que ama a tecnologia. Estou sempre em busca de novos desafios e formas de me aperfeiçoar. Essa plataforma online de anotações foi um dos meus muitos projetos que tive um enorme prazer e dedicação em fazer. Espero que ela sirva pros seus propósitos. E caso queira falar comigo há um formulário de contato e minhas redes um pouco abaixo.</p>
+  </article>
+
+  <article class="form-contato" id="formulario">
+    <h1>Contatar</h1>
+    <form action="https://formspree.io/f/myylnppa" method="POST">
+      <input type="text" name="name" required="required" placeholder=" Nome">
+      <input type="email" name="_replyto" required="required" placeholder=" Email">
+      <textarea name="message" placeholder="Assunto" ocols="30" rows="10" required="required"></textarea>
+      <input type="submit" value="Enviar" class="enviar">
+    </form>
+  </article>
+</main>
+{% endblock %}
+

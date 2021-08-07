@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="author" content="Gabriel Santana">
+    <meta name="copyright" content="© 2021 GabrielSantana">
+    <meta name="rating" content="general">
+    <meta name="description" content='"LEMBRAR-ME" - Uma incrível plataforma de criação de lembretes, totalmente gratuita e 100% confiável. Feita para lhe atender'>
+    <meta name="keywords" content="lembrete online,lembrete,anotações online,criacao de lembretes,lembretes,anotacoes,LEMBRAR-ME">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <link rel="shortcut icon" href="{% static 'imgs/logo.png' %}" type="image/x-icon">
+    <title>Lembrar-me</title>
+  </head>
+
+  <body>
+    {% block content %}
+    {% endblock %}
+    <footer class="rodape-pag-inicial">
+      <h4>Redes</h4>
+      <ul>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/gabriel-santana-485767203"><i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/GabrielSantos198"><i class="fa fa-github"></i></a>
+        <a href="mailto:gabrielsantana9807@gmail.com"><i class="fa fa-envelope"></i></a>
+      </ul>
+      <p>Copyright ©2021 Gabriel Santana</p>  
+    </footer>
+
+
+  </body>
+
+</html>
+
