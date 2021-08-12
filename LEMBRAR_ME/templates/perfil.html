@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="posts">
+    {% for post in object_list  %}
+    <header class="header-posts">
+      <h2><a href="{% url 'conteudo' post.slug %}">{{ post.titulo }}</a></h2>
+        <article>
+          <a class="editar" href="{% url 'editar' post.slug %}"><i class="far fa-edit"></i></a>
+          <a class="excluir" href="{% url 'excluir' post.slug %}"><i class="far fa-trash-alt"></i></a>
+        </article>
+    </header>
+    <p class="sumario">{{ post.sumario }}<a href="{% url 'conteudo' post.slug %}"> +Mais</a></p>
+    {% endfor %}
+</section>
+
+{% endblock %}

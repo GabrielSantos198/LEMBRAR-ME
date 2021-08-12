@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <article class="conteudo-do-post">
+      <h2>{{ post.titulo }}</h2>
+      <p class="cont">{{ post.conteudo }}</p>
+      <a class="voltar" href="{% url 'perfil' %}"><i class="fas fa-angle-left"></i> voltar</a>
+    </article>
+{% endblock %}

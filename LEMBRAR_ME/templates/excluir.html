@@ -1,0 +1,22 @@
+{% extends 'base_crud.html' %}
+
+{% block titulo %}Excluir{% endblock %}
+
+{% block content %}
+
+<section class="confirmar-exclusao">
+  <h2>Tem certeza que deseja excluir a Anotação?</h2>
+  <article>
+
+    <form method='POST'>
+      {% csrf_token %}
+      {{form}}
+      <input type="submit" value="Excluir">
+    </form>
+    <a href="{% url 'perfil' %}">Cancelar</a>
+
+  </article>
+</section">
+
+{% endblock%}
+

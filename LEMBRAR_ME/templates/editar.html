@@ -1,0 +1,18 @@
+{% extends 'base_crud.html' %}
+
+{% block titulo %}Editar{% endblock %}
+
+{% block content %}
+
+<h2 class="titulo-editar">Editar Anotação</h2>
+<section class="campos-editar">
+  <form method='POST'>
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" class="botao-editar" value="Editar">
+  </form>
+  <p class="v-p"><a href="{% url "perfil" %}">Voltar</a></p>
+</section>
+
+{% endblock%}
+

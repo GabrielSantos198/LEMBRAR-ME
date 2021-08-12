@@ -11,6 +11,12 @@ html{
 }
 
 
+/* Background do template base "base_crud.html" */
+.cor-geral{
+  background-color: #EFF0F1;
+}
+
+
 ::selection{
   background-color: #000;
   color: #fff;
@@ -43,6 +49,11 @@ html{
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+
+.header-pag-inicial .secao-login form label{
+  display: none;
 }
 
 
@@ -113,6 +124,7 @@ html{
 main{
   background-color: #EFF0F1;
   padding-top: 50px;
+  padding-bottom: 90px
 }
 
 
@@ -130,8 +142,8 @@ main .sobre-plataforma p{
   margin: 0 auto 0 auto;
   padding-top: 20px;
   letter-spacing: 2px;
-  word-spacing: 2px;
-  line-height: 25px;
+  word-spacing: 3px;
+  line-height: 30px;
   padding-bottom: 70px;
 }
 
@@ -145,7 +157,7 @@ main .cards{
 main .cards .card{
   width: 100%; 
   background-color: #FFFFFF;
-  height: 500px;
+  height: 550px;
   margin-bottom: 40px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   text-align: center;
@@ -179,14 +191,14 @@ main .cards .card h1{
 main .cards .card p{
   width: 90%;
   margin: 0 auto 0 auto;
-  line-height: 25px;
+  line-height: 30px;
   letter-spacing: 2px;
   word-spacing: 2px;
 }
 
 
 main .desenvolvedor{
-  width: 85%;
+  width: 90%;
   margin: 80px auto 0 auto;
   text-align: center;
 }
@@ -194,8 +206,8 @@ main .desenvolvedor{
 
 main .desenvolvedor p{
   letter-spacing: 2px;
-  word-spacing: 2px;
-  line-height: 25px;
+  word-spacing: 3px;
+  line-height: 30px;
 }
 
 
@@ -264,7 +276,6 @@ main .form-contato form .enviar{
 .rodape-pag-inicial{
   width: 100%;
   background-color: grey;
-  margin-top: 150px;
 }
 
 
@@ -313,8 +324,217 @@ main .form-contato form .enviar{
 
 
 
-/* Verção PC */
+/* 
+ ===============================================
+              Página de Postagens
+ ================================================
+*/
+.posts{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
 
+
+.posts .header-posts{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #BDB76B;
+  border-radius: 8px 8px 0 0;
+  padding: 10px 0 10px 0;
+}
+
+
+.posts .header-posts h2{
+  padding-left: 5px;
+  width: 76%;
+  word-wrap: break-word;
+}
+
+
+.posts .header-posts h2 a{
+  color: #0072aa;
+}
+
+
+.posts .header-posts article{
+  display: flex;
+  padding-right: 15px;
+}
+
+
+.posts .header-posts article a{
+  font-size: 22px;
+}
+
+
+.posts .header-posts article .editar{
+  color: green;
+}
+
+
+.posts .header-posts article .excluir{
+  color: red;
+}
+
+
+.posts .header-posts article a:first-child{
+  padding-right: 5px;
+}
+
+
+.posts .sumario{
+  height: 170px;
+  padding: 20px 5px 0 5px;
+  background-color: #F0E68C;
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 60px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+
+.posts .sumario a{
+  color: #0072aa;
+}
+
+
+
+/* 
+ ===============================================
+        Formatação da página conteudo.html
+ ================================================
+*/
+.conteudo-do-post{
+  width: 90%;
+  margin: 100px auto 0 auto;
+  text-align: center;
+}
+
+
+.conteudo-do-post h2{
+  padding-bottom: 20px;
+  word-wrap: break-word;
+}
+
+
+.conteudo-do-post .cont{
+  margin-bottom: 40px;
+  word-wrap: break-word;
+}
+
+
+.conteudo-do-post .voltar{
+  color: #0072aa;
+  font-size: 30px;
+}
+
+
+
+/* 
+ ===============================================
+      Formatação da página excluir.html
+ ================================================
+*/
+.confirmar-exclusao{
+  width: 90%;
+  height: 90vh;
+  margin: 0 auto 0 auto;
+  padding-top: 90px;
+  text-align: center;
+}
+
+
+.confirmar-exclusao article{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+
+.confirmar-exclusao article form input{
+  background-color: red;
+  color: #fff;
+  padding: 10px 15px 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 30px;
+}
+
+
+.confirmar-exclusao article form input:hover{
+  box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 50px #ff96ad, 0 0 200px #ff96ad;
+}
+
+
+.confirmar-exclusao article a{
+  color: #0072aa;
+}
+
+
+
+/* 
+ ===============================================
+        Formatação da página editar.html
+ ================================================
+*/
+.titulo-editar{
+  text-align: center;
+  padding: 90px 0 30px 0;
+}
+
+
+.campos-editar{
+  width: 90%;
+  margin:  0 auto 0 auto;
+}
+
+
+.campos-editar form{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.campos-editar form input{
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+
+.campos-editar form .botao-editar{
+  background-color: green;
+  color: #fff;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px 0 15px 0;
+}
+
+
+.campos-editar .v-p{
+  width: 100%;
+  text-align: center;
+  padding-bottom: 90px;
+}
+
+
+.campos-editar .v-p a{
+  color: #0072aa;
+}
+
+
+
+/* 
+ ===============================================
+        VERSÃO DA PLATAFORMA EM PC 
+ ================================================
+*/
 @media (min-width: 800px){
   .header-pag-inicial .secao-login{
     width: 60%;
@@ -358,7 +578,14 @@ main .form-contato form .enviar{
   }
 
 
+  /* Página de Postagens */
+  .posts{
+    width: 80%;
+  }
+
+
+  /* Formatação da página editar.html */
+  .campos-editar{
+    width: 80%;
+
 }
-
-
-
