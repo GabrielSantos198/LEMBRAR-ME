@@ -329,11 +329,62 @@ main .form-contato form .enviar{
               Página de Postagens
  ================================================
 */
+
+.butoes{
+  width: 78%;
+  margin: 0 auto 0 auto;
+  display: flex;
+}
+
+
+.butoes .butao-novo{
+  width: 100%;
+  text-align: right;
+}
+
+
+.butoes .butao-novo a{
+  background-color: green;
+  padding: 10px 15px 10px 15px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+
+.butoes .butao-conf a{
+  color: #0072aa;
+  padding: 10px;
+  font-weight: bold;
+  color: grey;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+}
+
+
 .posts{
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 80px;
+}
+
+
+.posts .buscar{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+
+.posts .buscar input{
+  width: 75%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+.posts .buscar button{
+  padding: 10px;
 }
 
 
@@ -479,34 +530,34 @@ main .form-contato form .enviar{
 
 /* 
  ===============================================
-        Formatação da página editar.html
+  Formatação da página editar.html e novo.html
  ================================================
 */
-.titulo-editar{
+.titulo-editar, .titulo-novo{ 
   text-align: center;
   padding: 90px 0 30px 0;
 }
 
 
-.campos-editar{
+.campos{
   width: 90%;
   margin:  0 auto 0 auto;
 }
 
 
-.campos-editar form{
+.campos form{
   display: flex;
   flex-direction: column;
 }
 
 
-.campos-editar form input{
+.campos form input{
   padding: 12px;
   margin-bottom: 15px;
 }
 
 
-.campos-editar form .botao-editar{
+.campos form .botao{
   background-color: green;
   color: #fff;
   font-size: 15px;
@@ -517,15 +568,28 @@ main .form-contato form .enviar{
 }
 
 
-.campos-editar .v-p{
+.campos .v-p{
   width: 100%;
   text-align: center;
   padding-bottom: 90px;
 }
 
 
-.campos-editar .v-p a{
+.campos .v-p a{
   color: #0072aa;
+}
+
+
+
+/* 
+ ===============================================
+        Formatação da página buscar.html
+ ================================================
+*/
+.titulo-result-busca{
+  text-align: center;
+  padding-bottom: 30px;
+  color: grey;
 }
 
 

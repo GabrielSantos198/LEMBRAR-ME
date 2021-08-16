@@ -1,15 +1,15 @@
 {% extends 'base_crud.html' %}
 
-{% block titulo %}Editar{% endblock %}
+{% block titulo %}Novo{% endblock %}
 
 {% block content %}
 
-<h2 class="titulo-editar">Editar Anotação</h2>
+<h2 class="titulo-novo">Nova Anotação</h2>
 <section class="campos">
   <form method='POST'>
     {% csrf_token %}
     {{form}}
-    <input type="submit" class="botao" value="Editar">
+    <input type="submit" class="botao" value="Novo">
   </form>
   <p class="v-p"><a href="{% url "anotacoes" %}">Voltar</a></p>
 </section>

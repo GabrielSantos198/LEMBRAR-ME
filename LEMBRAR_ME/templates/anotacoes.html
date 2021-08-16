@@ -2,7 +2,19 @@
 
 {% block content %}
 
+<section class="butoes">
+  <p class="butao-conf"><a href="#">Configurações</a></p>
+  <p class="butao-novo"><a href="{% url 'novo' %}">Novo</a></p>
+</section>
+
 <section class="posts">
+
+  <form class="buscar" action="{% url 'buscar' %}" method="get">
+    {% csrf_token %}
+    <input type="search" required="required" placeholder="Buscar" name="q">
+    <button><i class="fa fa-search"></i></button>
+  </form>
+
     {% for post in object_list  %}
     <header class="header-posts">
       <h2><a href="{% url 'conteudo' post.slug %}">{{ post.titulo }}</a></h2>

@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
-
+from django.template.defaultfilters import slugify
 # Create your models here.
 class Post(models.Model):
     titulo = models.CharField(max_length=50)
@@ -16,4 +16,7 @@ class Post(models.Model):
         return self.titulo
 
 
-
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.titulo)
+        return super().save(*args, **kwargs)
