@@ -3,10 +3,11 @@
 {% block content %}
 
 <section class="butoes">
-  <p class="butao-conf"><a href="#">Configurações</a></p>
+  <p class="butao-conf"><a href="{% url 'confs' %}">Configuração</a></p>
   <p class="butao-novo"><a href="{% url 'novo' %}">Novo</a></p>
 </section>
 
+{% if object_list %}
 <section class="posts">
 
   <form class="buscar" action="{% url 'buscar' %}" method="get">
@@ -25,6 +26,29 @@
     </header>
     <p class="sumario">{{ post.sumario }}<a href="{% url 'conteudo' post.slug %}"> +Mais</a></p>
     {% endfor %}
+
+    {% if is_paginated %}
+        <section class="paginacao">
+            {% if page_obj.has_previous %}  
+                <span class="paginar"><a href="?page={{ page_obj.previous_page_number }}"><i class="fas fa-arrow-left"></i></a></span>
+            {% endif %}  
+
+            <span class="atual">
+                {{ page_obj.number }} de {{ page_obj.paginator.num_pages }} 
+            </span>
+
+            {% if page_obj.has_next %}  
+                <span class="paginar"><a href="?page={{ page_obj.next_page_number }}"><i class="fas fa-arrow-right"></i></a></span>
+            {% endif %}  
+        </section>
+    {% endif %}
 </section>
+{% else %}
+<section class="vazio">
+  <img src="../static/imgs/robot.png" alt="Robozinho da Página não foi carregado">
+  <h1>Parece que você não fez anotações ainda</h1>
+  <p>Assim que você fizer alguma anotação ela será mostrada aqui.</p>
+</section>
+{% endif %}
 
 {% endblock %}

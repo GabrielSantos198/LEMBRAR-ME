@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-74bd1+6t!%9f%i*xug=9oy!^*jc^8e19&t$ovmk9tvdk0v&8n=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'app',
     'users',
     # 3 apps
+    'ckeditor',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -156,4 +157,3 @@ ACCOUNT_AUTHENTICATION_METHOD = "username_email"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
-

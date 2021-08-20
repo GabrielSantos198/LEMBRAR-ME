@@ -1,0 +1,21 @@
+{% extends 'base_crud.html' %}
+
+{% block titulo %}Configuração{% endblock %}
+
+{% block content %}
+
+<section class="confs">
+  <article>
+      <h1>Configuração</h1>
+
+      <ul>
+        <a href="{% url 'anotacoes' %}">Retornar</a>
+        <a href="{% url 'alterar' %}">Alterar Senha</a>
+        <a href="{% url 'account_logout' %}">Sair</a>
+      </ul>
+
+  </article>
+</section>
+
+{% endblock%}
+

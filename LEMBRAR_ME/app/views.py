@@ -1,15 +1,18 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, TemplateView
 from django.views.generic.edit import DeleteView, UpdateView, CreateView
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 from .models import Post
 from django.db.models import Q
+from django.core.paginator import Paginator
+from allauth.account.views import PasswordChangeView
 # Create your views here.
 
 @method_decorator(login_required, name='dispatch')
 class Anotacoes(ListView):
     template_name = 'anotacoes.html'
+    paginate_by = 15
 
 
     def get_queryset(self):
@@ -73,3 +76,18 @@ class Buscar(ListView):
             )
         return object_list
 
+
+@method_decorator(login_required, name='dispatch')
+class Confs(TemplateView):
+    template_name = 'confs.html'
+
+
+@method_decorator(login_required, name='dispatch')
+class AlterarSenha(PasswordChangeView):
+    template_name = 'account/alterar-senha.html'
+    success_url = 'sucesso'
+    
+
+@method_decorator(login_required, name='dispatch')
+class Sucesso(TemplateView):
+    template_name = 'sucesso.html'

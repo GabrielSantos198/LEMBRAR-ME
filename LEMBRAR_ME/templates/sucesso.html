@@ -1,0 +1,16 @@
+{% extends 'base_crud.html' %}
+
+{% block titulo %}Senha alterada com sucesso{% endblock %}
+
+{% block content %}
+
+<section class="pag-sucesso">
+  <article>
+      <h1>Senha Alterada com Sucesso!</h1>
+      <p>Sua senha foi alterada com sucesso. A partir de agora use a nova senha para efetuar o login na Plataforma.</p>
+      <a href="{% url 'confs' %}">Voltar</a>
+  </article>
+</section>
+
+{% endblock%}
+

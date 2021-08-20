@@ -212,8 +212,8 @@ main .desenvolvedor p{
 
 
 main .desenvolvedor img{
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   margin-top: 30px;
   margin-bottom: 30px;
   border-radius: 50%;
@@ -222,7 +222,7 @@ main .desenvolvedor img{
 
 main .form-contato{
   margin-top: 80px;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
   width: 100%;
   background-image: url('../imgs/background.jpg');
   background-attachment: fixed;
@@ -453,6 +453,24 @@ main .form-contato form .enviar{
 }
 
 
+.vazio{
+  width: 90%;
+  margin: 0 auto 0 auto;
+  text-align: center;
+  color: grey;
+  padding-top: 50px;
+}
+
+
+.vazio img{
+  width: 400px;
+}
+
+.vazio h1{
+  padding-bottom: 10px;
+}
+
+
 
 /* 
  ===============================================
@@ -469,12 +487,14 @@ main .form-contato form .enviar{
 .conteudo-do-post h2{
   padding-bottom: 20px;
   word-wrap: break-word;
+  color: grey; 
 }
 
 
 .conteudo-do-post .cont{
   margin-bottom: 40px;
   word-wrap: break-word;
+  color: grey; 
 }
 
 
@@ -487,10 +507,10 @@ main .form-contato form .enviar{
 
 /* 
  ===============================================
-      Formatação da página excluir.html
+Formatações das páginas excluir.html e logout.html
  ================================================
 */
-.confirmar-exclusao{
+.confirmar-exclusao, .sair-sistema{
   width: 90%;
   height: 90vh;
   margin: 0 auto 0 auto;
@@ -499,7 +519,12 @@ main .form-contato form .enviar{
 }
 
 
-.confirmar-exclusao article{
+.confirmar-exclusao h2, .sair-sistema h2{
+  color: grey;
+}
+
+
+.confirmar-exclusao article, .sair-sistema article{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -507,7 +532,7 @@ main .form-contato form .enviar{
 }
 
 
-.confirmar-exclusao article form input{
+.confirmar-exclusao article form input, .sair-sistema article form input{
   background-color: red;
   color: #fff;
   padding: 10px 15px 10px 15px;
@@ -517,13 +542,154 @@ main .form-contato form .enviar{
 }
 
 
-.confirmar-exclusao article form input:hover{
+.confirmar-exclusao article form input:hover, .sair-sistema article form input:hover{
   box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 50px #ff96ad, 0 0 200px #ff96ad;
 }
 
 
-.confirmar-exclusao article a{
+.confirmar-exclusao article a, .sair-sistema article a{
   color: #0072aa;
+}
+
+
+
+/* 
+ ===============================================
+  Formatação da página confs.html
+ ================================================
+*/
+.confs{
+  width: 100%;
+  height: 100vh;
+}
+
+
+.confs article h1{
+  text-align: center;
+  font-size: 30px;
+  color: grey;
+  padding: 50px 0 50px 0;
+}
+
+
+.confs article ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.confs article ul a{
+  width: 80%;
+  padding: 12px;
+  margin-bottom: 20px;
+  background-color: #0072aa;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+}
+
+
+
+/* 
+ ===============================================
+  Formatação da página alterar-senha.html
+ ================================================
+*/
+.alterar-senha{
+  width: 100%;
+  height: 100vh;
+}
+
+
+.alterar-senha article{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px 0 50px 0;
+}
+
+
+.alterar-senha article h2{
+  text-align: center;
+  color: grey;
+}
+
+
+.alterar-senha article form{
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+
+.alterar-senha article form label{
+  display: none;
+}
+
+
+.alterar-senha article form input{
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+
+.alterar-senha article form .alterar{
+  background-color: green;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+
+.alterar-senha article .cancelar{
+  text-align: center;
+}
+
+
+.alterar-senha article .cancelar a{
+  color: #0072aa;
+}
+
+
+
+/* 
+ ===============================================
+      Formatação da página sucesso.html
+ ================================================
+*/
+.pag-sucesso{
+  width: 100%;
+  height: 100vh;
+}
+
+
+.pag-sucesso article{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px 0 50px 0;
+  text-align: center;
+}
+
+
+.pag-sucesso article h1{
+  font-size: 30px;
+  color: green;
+}
+
+
+.pag-sucesso article a{
+  color: #0072aa;
+}
+
+
+.pag-sucesso article p{
+  padding: 10px 0 10px 0;
+  color: grey;
 }
 
 
@@ -536,6 +702,7 @@ main .form-contato form .enviar{
 .titulo-editar, .titulo-novo{ 
   text-align: center;
   padding: 90px 0 30px 0;
+  color: grey;
 }
 
 
@@ -548,6 +715,12 @@ main .form-contato form .enviar{
 .campos form{
   display: flex;
   flex-direction: column;
+  overflow: auto;
+}
+
+
+.campos form label{
+  color: grey;
 }
 
 
@@ -596,6 +769,76 @@ main .form-contato form .enviar{
 
 /* 
  ===============================================
+                  Paginação
+ ================================================
+*/
+.paginacao{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.paginacao .paginar a{
+  color: #0072aa;
+  font-size: 30px;
+}
+
+
+.paginacao .atual{
+  font-size: 25px;
+  padding: 0 8px 0 8px;
+}
+
+
+
+/* 
+ ===============================================
+        Formatação da página 404.html
+ ================================================
+*/
+.erro404{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #EFF0F1;
+}
+
+
+.erro404 h3{
+  color: grey;
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+
+.erro404 h4{
+  color: grey;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+
+.erro404 img{
+  width: 300px;
+}
+
+
+.voltar-pag404{
+  color: #0072aa;
+  font-size: 25px;
+  margin: 0 0 20px 0;
+  cursor: pointer;
+}
+
+
+
+/* 
+ ===============================================
         VERSÃO DA PLATAFORMA EM PC 
  ================================================
 */
@@ -624,7 +867,7 @@ main .form-contato form .enviar{
 
 
   main .cards .card:nth-child(2){
-    margin: 0 24px 0 24px;
+    margin: 0 30px 0 30px;
   }
 
 
@@ -643,13 +886,30 @@ main .form-contato form .enviar{
 
 
   /* Página de Postagens */
-  .posts{
-    width: 80%;
+  .posts, .butoes{
+    width: 70%;
   }
 
 
-  /* Formatação da página editar.html */
-  .campos-editar{
-    width: 80%;
+  /* Formatação da página editar.html  e novo.html */
+  .campos{
+    width: 60%;
+    margin:  0 auto 0 auto;
+  }
+
+
+  /* Formatação página confs.html */
+  .confs article ul a{
+    width: 60%;
+    padding: 17px;
+    margin-bottom: 22px;
+  }
+
+  
+  /* Formatação da página password_change.html */
+  .alterar-senha article{
+    width: 60%;
+  }
+
 
 }

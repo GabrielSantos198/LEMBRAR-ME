@@ -1,0 +1,22 @@
+{% extends 'base_crud.html' %}
+
+{% block titulo %}Sair{% endblock %}
+
+{% block content %}
+
+<section class="sair-sistema">
+  <h2>Tem certeza que deseja Sair?</h2>
+  <article>
+
+    <form method='POST'>
+      {% csrf_token %}
+      {{form}}
+      <input type="submit" value="Sair">
+    </form>
+    <a href="{% url 'confs' %}">Cancelar</a>
+
+  </article>
+</section">
+
+{% endblock%}
+

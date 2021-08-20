@@ -17,32 +17,15 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
     <link rel="shortcut icon" href="{% static 'imgs/logo.png' %}" type="image/x-icon">
     <title>Lembrar-me</title>
-        <script>
-          window.onbeforeunload = () => {
-            for(const form of document.getElementsByTagName('form')) {
-              form.reset();
-  }
-}
-        </script>
   </head>
 
   <body>
-    <main>
-      {% block content %}
-      {% endblock %}
-    </main>
-    <footer class="rodape-pag-inicial">
-      <h4>Redes</h4>
-      <ul>
-        <a href="https://www.instagram.com/young.coder_official/"><i class="fa fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/gabriel-santana-485767203"><i class="fa fa-linkedin"></i></a>
-        <a href="https://github.com/GabrielSantos198"><i class="fa fa-github"></i></a>
-        <a href="mailto:gabrielsantana9807@gmail.com"><i class="fa fa-envelope"></i></a>
-      </ul>
-      <p>Copyright ©2021 Gabriel Santana</p>  
-    </footer>
-
-
+    <section class="erro404">
+      <h3>ERRO 404</h3>
+      <img src="../static/imgs/404.png" alt="">
+      <h4>Página não encontrada</h4>
+      <a class="voltar-pag404" href="{% url 'anotacoes' %}">Voltar</a>
+    </section>
   </body>
 
 </html>

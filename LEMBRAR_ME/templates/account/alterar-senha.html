@@ -1,0 +1,22 @@
+{% extends 'base_crud.html' %}
+
+{% block titulo %}Alterar Senha{% endblock %}
+
+{% block content %}
+
+<section class="alterar-senha">
+  <article>
+    <h2>Tem certeza que deseja Alterar a Senha?</h2>
+
+    <form action="{% url 'alterar' %}" method='POST'>
+      {% csrf_token %}
+      {{form}}
+      <input class="alterar" type="submit" value="Alterar">
+    </form>
+    <p class="cancelar"><a href="{% url 'confs' %}">Cancelar</a></p>
+
+  </article>
+</section">
+
+{% endblock%}
+

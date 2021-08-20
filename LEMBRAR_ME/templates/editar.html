@@ -8,7 +8,8 @@
 <section class="campos">
   <form method='POST'>
     {% csrf_token %}
-    {{form}}
+    {{ form.media }}
+    {{form|safe}}
     <input type="submit" class="botao" value="Editar">
   </form>
   <p class="v-p"><a href="{% url "anotacoes" %}">Voltar</a></p>
