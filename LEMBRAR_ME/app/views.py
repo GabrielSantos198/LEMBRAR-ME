@@ -7,6 +7,7 @@ from .models import Post
 from django.db.models import Q
 from django.core.paginator import Paginator
 from allauth.account.views import PasswordChangeView
+from users.models import User
 # Create your views here.
 
 @method_decorator(login_required, name='dispatch')
@@ -91,3 +92,16 @@ class AlterarSenha(PasswordChangeView):
 @method_decorator(login_required, name='dispatch')
 class Sucesso(TemplateView):
     template_name = 'sucesso.html'
+
+
+
+@method_decorator(login_required, name='dispatch')
+class UserDelete(DeleteView):
+    template_name = 'user_delete.html'
+    success_url = '/'
+
+
+    def get_queryset(self):
+        return User.objects.filter(id=self.request.user.id)
+
+

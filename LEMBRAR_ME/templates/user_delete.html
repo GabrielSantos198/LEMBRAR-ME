@@ -1,0 +1,22 @@
+{% extends 'base_crud.html' %}
+
+{% block titulo %}Deletar Conta{% endblock %}
+
+{% block content %}
+
+<section class="deletar-conta">
+  <h2>Tem certeza que deseja Deletar sua Conta?</h2>
+  <article>
+
+    <form method='POST'>
+      {% csrf_token %}
+      {{form}}
+      <input type="submit" value="Deletar">
+    </form>
+    <a href="{% url 'confs' %}">Cancelar</a>
+
+  </article>
+</section">
+
+{% endblock%}
+

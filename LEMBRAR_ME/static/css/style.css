@@ -507,10 +507,10 @@ main .form-contato form .enviar{
 
 /* 
  ===============================================
-Formatações das páginas excluir.html e logout.html
+Formatações das páginas excluir.html, logout.html e user_delete.html
  ================================================
 */
-.confirmar-exclusao, .sair-sistema{
+.confirmar-exclusao, .sair-sistema, .deletar-conta{
   width: 90%;
   height: 90vh;
   margin: 0 auto 0 auto;
@@ -519,12 +519,12 @@ Formatações das páginas excluir.html e logout.html
 }
 
 
-.confirmar-exclusao h2, .sair-sistema h2{
+.confirmar-exclusao h2, .sair-sistema h2, .deletar-conta h2{
   color: grey;
 }
 
 
-.confirmar-exclusao article, .sair-sistema article{
+.confirmar-exclusao article, .sair-sistema article, .deletar-conta article{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -532,7 +532,7 @@ Formatações das páginas excluir.html e logout.html
 }
 
 
-.confirmar-exclusao article form input, .sair-sistema article form input{
+.confirmar-exclusao article form input, .sair-sistema article form input, .deletar-conta article form input{
   background-color: red;
   color: #fff;
   padding: 10px 15px 10px 15px;
@@ -542,12 +542,12 @@ Formatações das páginas excluir.html e logout.html
 }
 
 
-.confirmar-exclusao article form input:hover, .sair-sistema article form input:hover{
+.confirmar-exclusao article form input:hover, .sair-sistema article form input:hover, .deletar-conta article form input:hover{
   box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 50px #ff96ad, 0 0 200px #ff96ad;
 }
 
 
-.confirmar-exclusao article a, .sair-sistema article a{
+.confirmar-exclusao article a, .sair-sistema article a, .deletar-conta article a{
   color: #0072aa;
 }
 
@@ -572,14 +572,14 @@ Formatações das páginas excluir.html e logout.html
 }
 
 
-.confs article ul{
+.confs article nav{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 
-.confs article ul a{
+.confs article nav a{
   width: 80%;
   padding: 12px;
   margin-bottom: 20px;
@@ -899,7 +899,7 @@ Formatações das páginas excluir.html e logout.html
 
 
   /* Formatação página confs.html */
-  .confs article ul a{
+  .confs article nav a{
     width: 60%;
     padding: 17px;
     margin-bottom: 22px;

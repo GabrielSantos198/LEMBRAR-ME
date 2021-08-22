@@ -8,11 +8,12 @@
   <article>
       <h1>Configuração</h1>
 
-      <ul>
+      <nav>
         <a href="{% url 'anotacoes' %}">Retornar</a>
         <a href="{% url 'alterar' %}">Alterar Senha</a>
         <a href="{% url 'account_logout' %}">Sair</a>
-      </ul>
+        <a href="{% url 'user_delete' user.pk %}">Deletar Conta</a>
+      </nav>
 
   </article>
 </section>

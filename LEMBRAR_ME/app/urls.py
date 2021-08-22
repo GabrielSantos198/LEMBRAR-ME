@@ -12,4 +12,5 @@ urlpatterns = [
     path('confs/', views.Confs.as_view(), name="confs"),
     path('confs/alterar-senha/', views.AlterarSenha.as_view(), name="alterar"),
     path('confs/alterar-senha/sucesso/', views.Sucesso.as_view(), name="sucesso"),
+    path('user/delete/<int:pk>/', views.UserDelete.as_view(), name="user_delete"),
 ]
