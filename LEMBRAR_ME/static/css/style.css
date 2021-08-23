@@ -326,7 +326,7 @@ main .form-contato form .enviar{
 
 /* 
  ===============================================
-              Página de Postagens
+              Página de usuario.html
  ================================================
 */
 
@@ -474,40 +474,45 @@ main .form-contato form .enviar{
 
 /* 
  ===============================================
-        Formatação da página conteudo.html
+        Formatação da página anotacao.html
  ================================================
 */
 .conteudo-do-post{
   width: 90%;
-  margin: 100px auto 0 auto;
+  margin: 50px auto 0 auto;
   text-align: center;
+  color: grey; 
 }
 
 
 .conteudo-do-post h2{
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   word-wrap: break-word;
-  color: grey; 
+  font-size: 30px;
 }
 
 
 .conteudo-do-post .cont{
-  margin-bottom: 40px;
   word-wrap: break-word;
-  color: grey; 
 }
 
 
-.conteudo-do-post .voltar{
+.sair-da-anotacao{
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #0072aa;
   font-size: 30px;
+  cursor: pointer;
 }
 
 
 
 /* 
  ===============================================
-Formatações das páginas excluir.html, logout.html e user_delete.html
+Formatações das páginas excluir-anotacao.html, sair.html e deletar-conta.html
  ================================================
 */
 .confirmar-exclusao, .sair-sistema, .deletar-conta{
@@ -684,6 +689,7 @@ Formatações das páginas excluir.html, logout.html e user_delete.html
 
 .pag-sucesso article a{
   color: #0072aa;
+  font-size: 20px;
 }
 
 
@@ -695,9 +701,9 @@ Formatações das páginas excluir.html, logout.html e user_delete.html
 
 
 /* 
- ===============================================
-  Formatação da página editar.html e novo.html
- ================================================
+   ===============================================
+Formatação da página editar-anotacao.html e nova-anotacao.html
+   ================================================
 */
 .titulo-editar, .titulo-novo{ 
   text-align: center;
@@ -885,13 +891,13 @@ Formatações das páginas excluir.html, logout.html e user_delete.html
   }
 
 
-  /* Página de Postagens */
+  /* Página usuario.html */
   .posts, .butoes{
     width: 70%;
   }
 
 
-  /* Formatação da página editar.html  e novo.html */
+  /* Formatação da página editar-anotacao.html e nova-anotacao.html */
   .campos{
     width: 60%;
     margin:  0 auto 0 auto;
@@ -906,7 +912,7 @@ Formatações das páginas excluir.html, logout.html e user_delete.html
   }
 
   
-  /* Formatação da página password_change.html */
+  /* Formatação da página alterar-senha.html */
   .alterar-senha article{
     width: 60%;
   }

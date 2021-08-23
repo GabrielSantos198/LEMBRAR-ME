@@ -9,10 +9,10 @@
       <h1>Configuração</h1>
 
       <nav>
-        <a href="{% url 'anotacoes' %}">Retornar</a>
-        <a href="{% url 'alterar' %}">Alterar Senha</a>
-        <a href="{% url 'account_logout' %}">Sair</a>
-        <a href="{% url 'user_delete' user.pk %}">Deletar Conta</a>
+        <a href="{% url 'usuario' %}">Retornar</a>
+        <a href="{% url 'alterar-senha' %}">Alterar Senha</a>
+        <a href="{% url 'sair' %}">Sair</a>
+        <a href="{% url 'deletar-conta' user.pk %}">Deletar Conta</a>
       </nav>
 
   </article>

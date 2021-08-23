@@ -3,14 +3,17 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.Anotacoes.as_view(), name="anotacoes"),
-    path('conteudo/<slug:slug>/', views.Conteudo.as_view(), name="conteudo"),
-    path('excluir/<slug:slug>/', views.Excluir.as_view(), name="excluir"),
-    path('editar/<slug:slug>/', views.Editar.as_view(), name="editar"),
-    path('novo/', views.Novo.as_view(), name="novo"),
-    path('buscar/', views.Buscar.as_view(), name="buscar"),
-    path('confs/', views.Confs.as_view(), name="confs"),
-    path('confs/alterar-senha/', views.AlterarSenha.as_view(), name="alterar"),
-    path('confs/alterar-senha/sucesso/', views.Sucesso.as_view(), name="sucesso"),
-    path('user/delete/<int:pk>/', views.UserDelete.as_view(), name="user_delete"),
+    path('', views.Entrar.as_view(), name='entrar'),
+    path('cadastrar/', views.Cadastrar.as_view(), name='cadastrar'),
+    path('usuario/confs/sair/', views.Sair.as_view(), name='sair'),
+    path('usuario/', views.Usuario.as_view(), name='usuario'),
+    path('usuario/anotacao/<slug:slug>/', views.Anotacao.as_view(), name='anotacao'),
+    path('usuario/excluir/anotacao/<slug:slug>/', views.ExcluirAnotacao.as_view(), name='excluir-anotacao'),
+    path('usuario/editar/anotacao/<slug:slug>/', views.EditarAnotacao.as_view(), name='editar-anotacao'),
+    path('usuario/nova-anotacao/', views.NovaAnotacao.as_view(), name='nova-anotacao'),
+    path('usuario/buscar/', views.Buscar.as_view(), name='buscar'),
+    path('usuario/confs/', views.Confs.as_view(), name='confs'),
+    path('usuario/confs/alterar-senha/', views.AlterarSenha.as_view(), name='alterar-senha'),
+    path('usuario/confs/alterar-senha/sucesso/', views.Sucesso.as_view(), name='sucesso'),
+    path('usuario/confs/deletar-conta/<int:pk>/', views.DeletarConta.as_view(), name='deletar-conta'),
 ]

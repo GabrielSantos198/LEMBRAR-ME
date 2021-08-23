@@ -6,13 +6,31 @@ from django.contrib.auth.decorators import login_required
 from .models import Post
 from django.db.models import Q
 from django.core.paginator import Paginator
-from allauth.account.views import PasswordChangeView
+from allauth.account.views import PasswordChangeView, LoginView, SignupView, LogoutView
 from users.models import User
 # Create your views here.
 
+class Entrar(LoginView):
+    template_name = 'entrar.html'
+    success_url = 'usuario/'
+
+
+
+class Cadastrar(SignupView):
+    template_name = 'cadastrar.html'
+    success_url = '/usuario/'
+
+
+
+class Sair(LogoutView):
+    template_name = 'sair.html'
+    success_url = '/'
+
+
+
 @method_decorator(login_required, name='dispatch')
-class Anotacoes(ListView):
-    template_name = 'anotacoes.html'
+class Usuario(ListView):
+    template_name = 'usuario.html'
     paginate_by = 15
 
 
@@ -20,29 +38,32 @@ class Anotacoes(ListView):
         return Post.objects.filter(user_id=self.request.user.id).order_by('-editado')
 
 
+
 @method_decorator(login_required, name='dispatch')
-class Conteudo(DetailView):
-    template_name = 'conteudo.html'
+class Anotacao(DetailView):
+    template_name = 'anotacao.html'
 
 
     def get_queryset(self):
         return Post.objects.filter(user_id=self.request.user.id)
 
 
+
 @method_decorator(login_required, name="dispatch")
-class Excluir(DeleteView):
-    template_name = 'excluir.html'
-    success_url = '/'
+class ExcluirAnotacao(DeleteView):
+    template_name = 'excluir-anotacao.html'
+    success_url = '/usuario/'
 
 
     def get_queryset(self):
         return Post.objects.filter(user_id=self.request.user.id)
 
 
+
 @method_decorator(login_required, name="dispatch")
-class Editar(UpdateView):
-    template_name = 'editar.html'
-    success_url = '/'
+class EditarAnotacao(UpdateView):
+    template_name = 'editar-anotacao.html'
+    success_url = '/usuario/'
     fields = ('titulo', 'sumario', 'conteudo')
 
 
@@ -50,10 +71,11 @@ class Editar(UpdateView):
         return Post.objects.filter(user_id=self.request.user.id)
 
 
+
 @method_decorator(login_required, name="dispatch")
-class Novo(CreateView):
+class NovaAnotacao(CreateView):
     model = Post
-    template_name = 'novo.html'
+    template_name = 'nova-anotacao.html'
     fields = ('titulo', 'sumario', 'conteudo')
     success_url = "/"
 
@@ -63,6 +85,7 @@ class Novo(CreateView):
         self.object.user = self.request.user
         self.object.save()
         return super().form_valid(form)
+
 
 
 @method_decorator(login_required, name='dispatch')
@@ -78,16 +101,18 @@ class Buscar(ListView):
         return object_list
 
 
+
 @method_decorator(login_required, name='dispatch')
 class Confs(TemplateView):
     template_name = 'confs.html'
 
 
-@method_decorator(login_required, name='dispatch')
+
 class AlterarSenha(PasswordChangeView):
-    template_name = 'account/alterar-senha.html'
+    template_name = 'alterar-senha.html'
     success_url = 'sucesso'
     
+
 
 @method_decorator(login_required, name='dispatch')
 class Sucesso(TemplateView):
@@ -96,8 +121,8 @@ class Sucesso(TemplateView):
 
 
 @method_decorator(login_required, name='dispatch')
-class UserDelete(DeleteView):
-    template_name = 'user_delete.html'
+class DeletarConta(DeleteView):
+    template_name = 'deletar-conta.html'
     success_url = '/'
 
 

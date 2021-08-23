@@ -1,6 +1,6 @@
 {% extends 'base_crud.html' %}
 
-{% block titulo %}Editar{% endblock %}
+{% block titulo %}Editar Anotação{% endblock %}
 
 {% block content %}
 
@@ -12,7 +12,7 @@
     {{form|safe}}
     <input type="submit" class="botao" value="Editar">
   </form>
-  <p class="v-p"><a href="{% url "anotacoes" %}">Voltar</a></p>
+  <p class="v-p"><a href="{% url 'usuario' %}">Voltar</a></p>
 </section>
 
 {% endblock%}

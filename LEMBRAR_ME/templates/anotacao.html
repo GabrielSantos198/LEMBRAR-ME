@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <article class="conteudo-do-post">
+      <h2>{{ post.titulo }}</h2>
+      <p class="cont">{{ post.conteudo|safe }}</p>
+    </article>
+    <a class="sair-da-anotacao" href="{% url 'usuario' %}"><i class="fas fa-angle-left"></i> voltar</a>
+{% endblock %}
