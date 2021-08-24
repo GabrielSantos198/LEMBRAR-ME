@@ -20,7 +20,7 @@ from .views import Erro404
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('app.urls')),
-    path('urls-desativadas', include('allauth.urls')),
+    path('accounts/', include('allauth.urls')),
 ]
 
 
