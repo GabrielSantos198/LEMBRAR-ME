@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load socialaccount %}
+{% providers_media_js %}
 
 {% block content %}
 <header class="header-pag-inicial">
@@ -15,7 +17,7 @@
     <ul>
       <p><a href="#"><img src="../../static/imgs/facebook.png"> Facebook</a></p>
       <p><a class="linkedin" href="#"><img src="../../static/imgs/linkedin.png"> Linkedin</a></p>
-      <p><a class="google" href="#"><img src="../../static/imgs/google.png"> Google</a></p>
+      <p><a class="google" href="{% provider_login_url 'google' method='js_sdk' %}"><img src="../../static/imgs/google.png"> Google</a></p>
     </ul>
   </section>
 </header> 
