@@ -390,12 +390,14 @@ main .form-contato form .enviar{
 
 .posts .header-posts{
   width: 100%;
+  height: 80px !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #BDB76B;
   border-radius: 8px 8px 0 0;
   padding: 10px 0 10px 0;
+  overflow: auto;
 }
 
 
@@ -445,6 +447,7 @@ main .form-contato form .enviar{
   margin-bottom: 60px;
   text-align: center;
   word-wrap: break-word;
+  overflow: auto;
 }
 
 
@@ -845,9 +848,19 @@ Formatação da página editar-anotacao.html e nova-anotacao.html
 
 /* 
  ===============================================
-        VERSÃO DA PLATAFORMA EM PC 
+        Responsividade
  ================================================
 */
+@media (min-width: 500px) and (max-width: 799px){
+  main .cards .card{
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+
 @media (min-width: 800px){
   .header-pag-inicial .secao-login{
     width: 60%;
@@ -892,8 +905,43 @@ Formatação da página editar-anotacao.html e nova-anotacao.html
 
 
   /* Página usuario.html */
+  .posts .buscar{
+    width: 60%;
+    margin: 0 auto 60px auto;
+  }
+  
+
+  .posts .buscar input{
+    padding: 15px;
+  }
+
+
+  .posts .buscar button{
+    padding: 15px;
+  }
+
+
+  .posts{
+    width: 90% !important;
+  }
+
+
   .posts, .butoes{
     width: 70%;
+  }
+
+
+  .posts .linha{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+
+  .posts .coluna{
+    width: 30%;
+    margin: 0 10px 0 10px;
   }
 
 
@@ -917,5 +965,13 @@ Formatação da página editar-anotacao.html e nova-anotacao.html
     width: 60%;
   }
 
+
+}
+
+
+@media (min-width: 1000px){
+  main .cards .card{
+    height: 480px;
+  }
 
 }
