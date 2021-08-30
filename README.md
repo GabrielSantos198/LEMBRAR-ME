@@ -21,7 +21,7 @@ Life is full of commitments and we can't always remember them all, thinking abou
   ```
     git clone https://github.com/GabrielSantos198/LEMBRAR-ME
 
-    cd LEMBRAR-ME/LEMBRAR_ME/
+    cd LEMBRAR-ME
 
     pip install -r requirements-dev.txt
 
