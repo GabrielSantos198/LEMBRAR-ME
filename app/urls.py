@@ -16,4 +16,5 @@ urlpatterns = [
     path('usuario/confs/alterar-senha/', views.AlterarSenha.as_view(), name='alterar-senha'),
     path('usuario/confs/alterar-senha/sucesso/', views.Sucesso.as_view(), name='sucesso'),
     path('usuario/confs/deletar-conta/<int:pk>/', views.DeletarConta.as_view(), name='deletar-conta'),
+    path('politicas/', views.Politicas.as_view(), name='politicas'),
 ]

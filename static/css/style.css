@@ -291,7 +291,7 @@ main .form-contato form .enviar{
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 15px 0 60px 0;
+  padding: 15px 0 50px 0;
 }
 
 
@@ -316,10 +316,21 @@ main .form-contato form .enviar{
 }
 
 
-.rodape-pag-inicial p{
-  color: #fff;
+.rodape-pag-inicial article{
+  margin: 0 auto 0 auto;
   text-align: center;
   padding-bottom: 8px;
+}
+
+
+.rodape-pag-inicial article a{
+  color: #0072aa;
+}
+
+
+.rodape-pag-inicial article p{
+  color: #fff;
+  padding-top: 8px;
 }
 
 
@@ -848,6 +859,33 @@ Formatação da página editar-anotacao.html e nova-anotacao.html
 
 /* 
  ===============================================
+        Formatação da página politicas.html
+ ================================================
+*/
+.politicas{
+  width: 90%;
+  height: 130vh;
+  margin: 0 auto 0 auto;
+  padding-top: 70px;
+  text-align: center;
+  color: grey;
+}
+
+
+.politicas h1{
+  padding-bottom: 15px;
+  font-size: 25px;
+}
+
+
+.politicas a{
+  color: #0072aa;
+}
+
+
+
+/* 
+ ===============================================
         Responsividade
  ================================================
 */
@@ -954,7 +992,7 @@ Formatação da página editar-anotacao.html e nova-anotacao.html
 
   /* Formatação página confs.html */
   .confs article nav a{
-    width: 60%;
+    width: 50%;
     padding: 17px;
     margin-bottom: 22px;
   }

@@ -130,3 +130,5 @@ class DeletarConta(DeleteView):
         return User.objects.filter(id=self.request.user.id)
 
 
+class Politicas(TemplateView):
+    template_name = 'politicas.html'
