@@ -1,0 +1,16 @@
+{% extends 'base_crud.html' %}
+
+{% block titulo %}Senha definida com sucesso{% endblock %}
+
+{% block content %}
+
+<section class="pag-sucesso">
+  <article>
+      <h1>Senha Definida com Sucesso!</h1>
+      <p>Sua senha foi definida com sucesso. A partir de agora use ela para efetuar o login na Plataforma.</p>
+      <a href="{% url 'confs' %}">Voltar</a>
+  </article>
+</section>
+
+{% endblock%}
+

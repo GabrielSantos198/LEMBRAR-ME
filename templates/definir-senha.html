@@ -1,0 +1,22 @@
+{% extends 'base_crud.html' %}
+
+{% block titulo %}Definir Senha{% endblock %}
+
+{% block content %}
+
+<section class="definir-senha">
+  <article>
+    <h2>Definir uma Senha?</h2>
+
+    <form method='POST'>
+      {% csrf_token %}
+      {{form}}
+      <input class="definir" type="submit" value="Definir">
+    </form>
+    <p class="cancelar"><a href="{% url 'confs' %}">Cancelar</a></p>
+
+  </article>
+</section">
+
+{% endblock%}
+

@@ -613,16 +613,16 @@ Formatações das páginas excluir-anotacao.html, sair.html e deletar-conta.html
 
 /* 
  ===============================================
-  Formatação da página alterar-senha.html
+  Formatação das páginas alterar-senha.html e definir-senha.html
  ================================================
 */
-.alterar-senha{
+.alterar-senha, .definir-senha{
   width: 100%;
   height: 100vh;
 }
 
 
-.alterar-senha article{
+.alterar-senha article, .definir-senha article{
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -630,31 +630,31 @@ Formatações das páginas excluir-anotacao.html, sair.html e deletar-conta.html
 }
 
 
-.alterar-senha article h2{
+.alterar-senha article h2, .definir-senha article h2{
   text-align: center;
   color: grey;
 }
 
 
-.alterar-senha article form{
+.alterar-senha article form, .definir-senha article form{
   display: flex;
   flex-direction: column;
   padding-top: 30px;
 }
 
 
-.alterar-senha article form label{
+.alterar-senha article form label, .definir-senha article form label{
   display: none;
 }
 
 
-.alterar-senha article form input{
+.alterar-senha article form input, .definir-senha article form input{
   padding: 12px;
   margin-bottom: 15px;
 }
 
 
-.alterar-senha article form .alterar{
+.alterar-senha article form .alterar, .definir-senha article form .definir{
   background-color: green;
   color: #fff;
   border: none;
@@ -664,12 +664,12 @@ Formatações das páginas excluir-anotacao.html, sair.html e deletar-conta.html
 }
 
 
-.alterar-senha article .cancelar{
+.alterar-senha article .cancelar, .definir-senha article .cancelar{
   text-align: center;
 }
 
 
-.alterar-senha article .cancelar a{
+.alterar-senha article .cancelar a, .definir-senha article .cancelar a{
   color: #0072aa;
 }
 
@@ -677,7 +677,7 @@ Formatações das páginas excluir-anotacao.html, sair.html e deletar-conta.html
 
 /* 
  ===============================================
-      Formatação da página sucesso.html
+      Formatação das páginas de Sucesso
  ================================================
 */
 .pag-sucesso{

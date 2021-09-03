@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Post
 from django.db.models import Q
 from django.core.paginator import Paginator
-from allauth.account.views import PasswordChangeView, LoginView, SignupView, LogoutView
+from allauth.account.views import PasswordChangeView, LoginView, SignupView, LogoutView, PasswordSetView
 from users.models import User
 # Create your views here.
 
@@ -132,3 +132,22 @@ class DeletarConta(DeleteView):
 
 class Politicas(TemplateView):
     template_name = 'politicas.html'
+
+
+
+@method_decorator(login_required, name='dispatch')
+class Tema(TemplateView):
+    template_name = 'tema.html'
+
+
+
+class DefinirSenha(PasswordSetView):
+    template_name = 'definir-senha.html'
+    success_url = 'sucesso'
+    
+
+@method_decorator(login_required, name='dispatch')
+class SucessoDefinicao(TemplateView):
+    template_name = 'sucesso-definicao.html'
+
+
