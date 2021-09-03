@@ -12,7 +12,7 @@
         <a href="{% url 'usuario' %}">Retornar</a>
         <a href="{% url 'politicas' %}">Políticas</a>
         <a href="{% url 'tema' %}">Tema</a>
-        {% if user.password %}
+        {% if user.has_usable_password %}
             <a href="{% url 'alterar-senha' %}">Alterar Senha</a>
         {% else %}
             <a href="{% url 'definir-senha' %}">Definir Senha</a>

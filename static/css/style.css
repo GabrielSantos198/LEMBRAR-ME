@@ -998,8 +998,8 @@ Formatação da página editar-anotacao.html e nova-anotacao.html
   }
 
   
-  /* Formatação da página alterar-senha.html */
-  .alterar-senha article{
+  /* Formatação da página alterar-senha.html e definir-senha.html */
+  .alterar-senha article, .definir-senha article{
     width: 60%;
   }
 
