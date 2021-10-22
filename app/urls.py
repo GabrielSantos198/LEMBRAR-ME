@@ -17,7 +17,6 @@ urlpatterns = [
     path('usuario/confs/alterar-senha/sucesso/', views.Sucesso.as_view(), name='sucesso'),
     path('usuario/confs/deletar-conta/<int:pk>/', views.DeletarConta.as_view(), name='deletar-conta'),
     path('politicas/', views.Politicas.as_view(), name='politicas'),
-    path('tema/', views.Tema.as_view(), name='tema'),
     path('usuario/confs/definir-senha/', views.DefinirSenha.as_view(), name='definir-senha'),
     path('usuario/confs/definir-senha/sucesso/', views.SucessoDefinicao.as_view(), name='sucesso-definicao'),
 ]

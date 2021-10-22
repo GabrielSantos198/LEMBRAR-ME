@@ -1,40 +1,42 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<section class="butoes">
-  <p class="butao-conf"><a href="{% url 'confs' %}">Configuração</a></p>
-  <p class="butao-novo"><a href="{% url 'nova-anotacao' %}">Novo</a></p>
-</section>
-
-<section class="posts">
-
-  <form class="buscar" action="{% url 'buscar' %}" method="get">
-    {% csrf_token %}
-    <input type="search" required="required" placeholder="Buscar" name="q">
-    <button><i class="fa fa-search"></i></button>
-  </form>
-
-  {% if object_list %}
-      <h1 class="titulo-result-busca">RESULTADOS</h1>
-  {% else %}
-      <h1 class="titulo-result-busca">NADA ENCONTRADO</h1>
-  {% endif %}
-
-  <section class="linha">
-    {% for post in object_list  %}
-    <section class="coluna">
-      <header class="header-posts">
-        <h2><a href="{% url 'anotacao' post.slug %}">{{ post.titulo }}</a></h2>
-          <article>
-            <a class="editar" href="{% url 'editar-anotacao' post.slug %}"><i class="far fa-edit"></i></a>
-            <a class="excluir" href="{% url 'excluir-anotacao' post.slug %}"><i class="far fa-trash-alt"></i></a>
-          </article>
-      </header>
-      <p class="sumario">{{ post.sumario }}<a href="{% url 'anotacao' post.slug %}"> +Mais</a></p>
+<main>
+    <section class="butoes">
+        <p class="butao-conf"><a href="{% url 'confs' %}">Configuração</a></p>
+        <p class="butao-novo"><a href="{% url 'nova-anotacao' %}">Novo</a></p>
     </section>
-    {% endfor %}
-  </section>
-</section>
 
+    <section class="posts">
+
+        <form class="buscar" action="{% url 'buscar' %}" method="get">
+            {% csrf_token %}
+            <input type="search" required="required" placeholder="Buscar" name="q">
+            <button><i class="fa fa-search"></i></button>
+        </form>
+
+        {% if object_list %}
+        <h1 class="titulo-result-busca ti">RESULTADOS</h1>
+        {% else %}
+        <h1 class="titulo-result-busca ti">NADA ENCONTRADO</h1>
+        <a class="sair-da-anotacao" href="/">Voltar</a>
+        {% endif %}
+
+        <section class="linha">
+            {% for post in object_list  %}
+            <section class="coluna">
+                <header class="header-posts">
+                    <h2><a href="{% url 'anotacao' post.slug %}">{{ post.titulo }}</a></h2>
+                    <article>
+                        <a class="editar" href="{% url 'editar-anotacao' post.slug %}"><i class="far fa-edit"></i></a>
+                        <a class="excluir" href="{% url 'excluir-anotacao' post.slug %}"><i class="far fa-trash-alt"></i></a>
+                    </article>
+                </header>
+                <p class="sumario tt">{{ post.sumario }}<a href="{% url 'anotacao' post.slug %}"> +Mais</a></p>
+            </section>
+            {% endfor %}
+        </section>
+    </section>
+</main>
+{% include 'rodape.html' %}
 {% endblock %}

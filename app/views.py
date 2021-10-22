@@ -134,13 +134,6 @@ class Politicas(TemplateView):
     template_name = 'politicas.html'
 
 
-
-@method_decorator(login_required, name='dispatch')
-class Tema(TemplateView):
-    template_name = 'tema.html'
-
-
-
 class DefinirSenha(PasswordSetView):
     template_name = 'definir-senha.html'
     success_url = 'sucesso'

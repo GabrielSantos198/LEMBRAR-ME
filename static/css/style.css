@@ -11,12 +11,6 @@ html{
 }
 
 
-/* Background do template base "base_crud.html" */
-.cor-geral{
-  background-color: #EFF0F1;
-}
-
-
 ::selection{
   background-color: #000;
   color: #fff;
@@ -24,24 +18,79 @@ html{
 
 
 .header-pag-inicial{
-  background-color: #EFF0F1;
+    background: #003153;
 }
 
 
 .header-pag-inicial .secao-login{
-  padding-top: 80px;
+  padding-top: 50px;
   width: 85%;
   margin: 0 auto 0 auto;
   text-align: center;
 }
 
 
-.header-pag-inicial .logo{
-  margin-bottom: 60px;
-  font-size: 30px;
-  font-family: 'Coda Caption', sans-serif;
-  text-shadow: 7px 7px 5px grey;
-  transform: skew(-20deg, -10deg);
+.container {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Background color */
+    background-color: #bbb;
+
+    /* Size */
+    height: 52px;
+
+    /* Use to position the corners */
+    position: relative;
+    
+    /* Minha Formatação */
+    margin: 0 auto 60px auto;
+    width: 250px;
+    font-size: 25px;
+    font-family: 'Coda Caption', sans-serif;
+}
+
+.container__side {
+    bottom: -8px;
+    position: absolute;
+
+    /* Displayed under the container */
+    z-index: -1;
+
+    /* Background */
+    border: 16px solid #ccc;
+    border-left-color: transparent;
+}
+
+.container__side--left {
+    /* Position */
+    left: -24px;
+}
+
+.container__side--right {
+    /* Position */
+    right: -24px;
+}
+
+.container__triangle {
+    position: absolute;
+    top: 100%;
+
+    border: 8px solid transparent;
+    border-bottom-width: 0;
+    border-top-color: #aaa;
+}
+
+.container__triangle--left {
+    border-right-width: 0;
+    left: 0;
+}
+
+.container__triangle--right {
+    border-left-width: 0;
+    right: 0;
 }
 
 
@@ -61,6 +110,7 @@ html{
   padding: 12px;
   margin-bottom: 15px;
   cursor: pointer;
+  border: none;
 }
 
 
@@ -73,9 +123,12 @@ html{
   cursor: pointer;
 }
 
+.header-pag-inicial .secao-login .fp{
+    color: #fff;
+}
 
 .header-pag-inicial .secao-login .cadastro{
-  color: blue;
+  color: #6495ED;
   cursor: pointer; 
 }
 
@@ -122,21 +175,21 @@ html{
 
 
 main{
-  background-color: #EFF0F1;
-  padding-top: 50px;
-  padding-bottom: 90px
+  padding-bottom: 90px;
+  min-height: 70vh;
 }
 
 
 main .sobre-plataforma h2{
-  font-size: 24px;
+  font-family: 'Coda Caption', sans-serif;
   text-align: center;
-  color: #000;
+  color:  #003153;
   letter-spacing: 3px;
 }
 
 
 main .sobre-plataforma p{
+  color:  #003153;
   width: 90%;
   text-align: center;
   margin: 0 auto 0 auto;
@@ -145,6 +198,11 @@ main .sobre-plataforma p{
   word-spacing: 3px;
   line-height: 30px;
   padding-bottom: 70px;
+}
+
+
+main .sobre-plataforma p a{
+  color: #6495ED;
 }
 
 
@@ -184,7 +242,9 @@ main .cards .card img:hover{
 main .cards .card h1{
   font-size: 23px;
   letter-spacing: 3px;
-  margin-bottom: 20px;
+  margin: 20px 0 20px 0;
+  font-family: 'Coda Caption', sans-serif;
+  color: purple;
 }
 
 
@@ -194,6 +254,7 @@ main .cards .card p{
   line-height: 30px;
   letter-spacing: 2px;
   word-spacing: 2px;
+  color:  #003153;
 }
 
 
@@ -204,25 +265,31 @@ main .desenvolvedor{
 }
 
 
+main .desenvolvedor h1{
+  font-family: 'Coda Caption', sans-serif;
+  color:  #003153;
+  letter-spacing: 3px;
+}
+
+
 main .desenvolvedor p{
   letter-spacing: 2px;
   word-spacing: 3px;
   line-height: 30px;
+  color:  #003153;
 }
 
 
 main .desenvolvedor img{
   width: 200px;
   height: 200px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 30px 0 30px 0;
   border-radius: 50%;
 }
 
 
 main .form-contato{
-  margin-top: 80px;
-  margin-bottom: 20px;
+  margin: 80px 0 20px 0;
   width: 100%;
   background-image: url('../imgs/background.jpg');
   background-attachment: fixed;
@@ -233,16 +300,15 @@ main .form-contato{
 main .form-contato h1{
   color: #fff;
   text-align: center;
-  padding-top: 40px;
-  padding-bottom: 25px;
+  padding: 40px 0 25px 0;
   font-size: 30px;
+  font-family: 'Coda Caption', sans-serif;
 }
 
 
 main .form-contato form{
   width: 85%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 0 auto;
   padding-bottom: 40px;
   display: flex;
   flex-direction: column;
@@ -273,21 +339,24 @@ main .form-contato form .enviar{
 }
 
 
-.rodape-pag-inicial{
+.rodape{
+  background-color: #003153;
   width: 100%;
-  background-color: grey;
+  margin-top: 40px;
+  text-align: center;
 }
 
 
-.rodape-pag-inicial h4{
-  color: #fff;
+.rodape h4{
   padding-top: 25px;
   text-align: center;
   font-size: 25px;
+  font-family: 'Coda Caption', sans-serif;
+  color:  #fff;
 }
 
 
-.rodape-pag-inicial ul{
+.rodape ul{
   width: 100%;
   display: flex;
   justify-content: center;
@@ -295,7 +364,7 @@ main .form-contato form .enviar{
 }
 
 
-.rodape-pag-inicial ul a{
+.rodape ul a{
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -303,34 +372,22 @@ main .form-contato form .enviar{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #000;
-  font-size: 30px;
+  color: grey;;
+  font-size: 35px;
   cursor: pointer;
 }
 
 
-.rodape-pag-inicial ul a:hover{
+.rodape ul a:hover{
   background-color: #2ecc71;
   transform: rotate(26deg);
   transition: 0.5s;
 }
 
 
-.rodape-pag-inicial article{
-  margin: 0 auto 0 auto;
-  text-align: center;
-  padding-bottom: 8px;
-}
-
-
-.rodape-pag-inicial article a{
-  color: #0072aa;
-}
-
-
-.rodape-pag-inicial article p{
+.rodape p{
   color: #fff;
-  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 
@@ -345,6 +402,7 @@ main .form-contato form .enviar{
   width: 78%;
   margin: 0 auto 0 auto;
   display: flex;
+  margin-top: 50px;
 }
 
 
@@ -366,7 +424,6 @@ main .form-contato form .enviar{
   color: #0072aa;
   padding: 10px;
   font-weight: bold;
-  color: grey;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
 }
 
@@ -391,11 +448,17 @@ main .form-contato form .enviar{
   width: 75%;
   padding: 10px;
   cursor: pointer;
+  font-size: 15px;
 }
 
 
 .posts .buscar button{
   padding: 10px;
+  margin-left: 5px;
+  background: green;
+  color: #fff;
+  border: none;
+  font-size: 15px;
 }
 
 
@@ -405,7 +468,7 @@ main .form-contato form .enviar{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #BDB76B;
+  background-color: #003153;
   border-radius: 8px 8px 0 0;
   padding: 10px 0 10px 0;
   overflow: auto;
@@ -420,7 +483,7 @@ main .form-contato form .enviar{
 
 
 .posts .header-posts h2 a{
-  color: #0072aa;
+  color: #fff;
 }
 
 
@@ -453,7 +516,7 @@ main .form-contato form .enviar{
 .posts .sumario{
   height: 170px;
   padding: 20px 5px 0 5px;
-  background-color: #F0E68C;
+  background-color: #E4CFA9;
   border-radius: 0 0 8px 8px;
   margin-bottom: 60px;
   text-align: center;
@@ -471,8 +534,8 @@ main .form-contato form .enviar{
   width: 90%;
   margin: 0 auto 0 auto;
   text-align: center;
-  color: grey;
   padding-top: 50px;
+  color:  #003153;
 }
 
 
@@ -495,7 +558,7 @@ main .form-contato form .enviar{
   width: 90%;
   margin: 50px auto 0 auto;
   text-align: center;
-  color: grey; 
+  color:  #003153;
 }
 
 
@@ -531,15 +594,15 @@ Formatações das páginas excluir-anotacao.html, sair.html e deletar-conta.html
 */
 .confirmar-exclusao, .sair-sistema, .deletar-conta{
   width: 90%;
-  height: 90vh;
   margin: 0 auto 0 auto;
-  padding-top: 90px;
+  padding-top: 70px;
   text-align: center;
 }
 
 
 .confirmar-exclusao h2, .sair-sistema h2, .deletar-conta h2{
-  color: grey;
+  color:  #003153;
+  font-family: 'Coda Caption', sans-serif;
 }
 
 
@@ -579,14 +642,15 @@ Formatações das páginas excluir-anotacao.html, sair.html e deletar-conta.html
 */
 .confs{
   width: 100%;
-  height: 120vh;
+  margin-bottom: 50px;
 }
 
 
 .confs article h1{
   text-align: center;
   font-size: 30px;
-  color: grey;
+  color:  #003153;
+  font-family: 'Coda Caption', sans-serif;
   padding: 50px 0 50px 0;
 }
 
@@ -598,7 +662,7 @@ Formatações das páginas excluir-anotacao.html, sair.html e deletar-conta.html
 }
 
 
-.confs article nav a{
+.confs article nav a, .confs article nav select{
   width: 80%;
   padding: 12px;
   margin-bottom: 20px;
@@ -610,6 +674,11 @@ Formatações das páginas excluir-anotacao.html, sair.html e deletar-conta.html
 }
 
 
+.confs article nav select{
+    font-size: 18px;
+}
+
+
 
 /* 
  ===============================================
@@ -618,21 +687,20 @@ Formatações das páginas excluir-anotacao.html, sair.html e deletar-conta.html
 */
 .alterar-senha, .definir-senha{
   width: 100%;
-  height: 100vh;
 }
 
 
 .alterar-senha article, .definir-senha article{
   width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 0 auto;
   padding: 50px 0 50px 0;
 }
 
 
 .alterar-senha article h2, .definir-senha article h2{
   text-align: center;
-  color: grey;
+  color:  #003153;
+  font-family: 'Coda Caption', sans-serif;
 }
 
 
@@ -688,8 +756,7 @@ Formatações das páginas excluir-anotacao.html, sair.html e deletar-conta.html
 
 .pag-sucesso article{
   width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin:  0 auto 0 auto;
   padding: 50px 0 50px 0;
   text-align: center;
 }
@@ -721,8 +788,9 @@ Formatação da página editar-anotacao.html e nova-anotacao.html
 */
 .titulo-editar, .titulo-novo{ 
   text-align: center;
-  padding: 90px 0 30px 0;
-  color: grey;
+  padding: 50px 0 30px 0;
+  color:  #003153;
+  font-family: 'Coda Caption', sans-serif;
 }
 
 
@@ -740,7 +808,7 @@ Formatação da página editar-anotacao.html e nova-anotacao.html
 
 
 .campos form label{
-  color: grey;
+  color:  #003153;
 }
 
 
@@ -782,7 +850,9 @@ Formatação da página editar-anotacao.html e nova-anotacao.html
 .titulo-result-busca{
   text-align: center;
   padding-bottom: 30px;
-  color: grey;
+  color:  #003153;
+  font-family: 'Coda Caption', sans-serif;
+  letter-spacing: 3px;
 }
 
 
@@ -830,14 +900,14 @@ Formatação da página editar-anotacao.html e nova-anotacao.html
 
 
 .erro404 h3{
-  color: grey;
+  color:  #003153;
   font-size: 25px;
   padding-bottom: 10px;
 }
 
 
 .erro404 h4{
-  color: grey;
+  color:  #003153;
   font-size: 20px;
   padding-bottom: 10px;
 }
@@ -864,22 +934,24 @@ Formatação da página editar-anotacao.html e nova-anotacao.html
 */
 .politicas{
   width: 90%;
-  height: 130vh;
   margin: 0 auto 0 auto;
-  padding-top: 70px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   text-align: center;
-  color: grey;
+  color: #003153;
 }
 
 
 .politicas h1{
   padding-bottom: 15px;
-  font-size: 25px;
+  color:  #003153;
+  font-family: 'Coda Caption', sans-serif;
 }
 
 
 .politicas a{
   color: #0072aa;
+  font-weight: bolder;
 }
 
 
@@ -892,8 +964,7 @@ Formatação da página editar-anotacao.html e nova-anotacao.html
 @media (min-width: 500px) and (max-width: 799px){
   main .cards .card{
     width: 88%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 0 auto;
   }
 
 }
@@ -991,10 +1062,14 @@ Formatação da página editar-anotacao.html e nova-anotacao.html
 
 
   /* Formatação página confs.html */
-  .confs article nav a{
+  .confs article nav a, .confs article nav select{
     width: 50%;
     padding: 17px;
     margin-bottom: 22px;
+  }
+
+  .confs article nav select{
+      width: 53%;
   }
 
   

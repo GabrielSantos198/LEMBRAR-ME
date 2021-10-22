@@ -1,4 +1,4 @@
-{% extends 'base_crud.html' %}
+{% extends 'base.html' %}
 
 {% block titulo %}Configuração{% endblock %}
 
@@ -6,12 +6,17 @@
 
 <section class="confs">
   <article>
-      <h1>Configuração</h1>
+      <h1 class="ti">Configuração</h1>
 
       <nav>
         <a href="{% url 'usuario' %}">Retornar</a>
         <a href="{% url 'politicas' %}">Políticas</a>
-        <a href="{% url 'tema' %}">Tema</a>
+        <select id="tema" onchange="FuncTema()">
+            <option>Tema</option>
+            <option value="claro">Claro(Padrão)</option>
+            <option value="escuro">Escuro</option>
+            <option>Em Breve...</option>
+        </select>
         {% if user.has_usable_password %}
             <a href="{% url 'alterar-senha' %}">Alterar Senha</a>
         {% else %}
@@ -24,5 +29,6 @@
   </article>
 </section>
 
+<script src="//code-sa1.jivosite.com/widget/wC8i3Yq6bL" async></script>
 {% endblock%}
 

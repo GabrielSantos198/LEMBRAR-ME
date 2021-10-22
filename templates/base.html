@@ -24,8 +24,8 @@
     <meta name="keywords" content="lembrete online,lembrete,anotações online,criacao de lembretes,lembretes,anotacoes,LEMBRAR-ME">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
-    <link rel="shortcut icon" href="{% static 'imgs/logo.png' %}" type="image/x-icon">
-    <title>Lembrar-me</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/clouds/150/000000/folder-invoices.png" type="image/x-icon">
+    <title>{% block titulo %}Lembrar-me{% endblock %}</title>
         <script>
           window.onbeforeunload = () => {
             for(const form of document.getElementsByTagName('form')) {
@@ -33,30 +33,13 @@
   }
 }
         </script>
-        <script src="//code-sa1.jivosite.com/widget/wC8i3Yq6bL" async></script>
   </head>
 
   <body>
-    <main>
       {% block content %}
       {% endblock %}
-    </main>
-    <footer class="rodape-pag-inicial">
-      <h4>Redes</h4>
-      <ul>
-        <a href="https://www.instagram.com/young.coder_official/" target="_blank"><i class="fa fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/gabriel-santana-485767203" target="_blank"><i class="fa fa-linkedin"></i></a>
-        <a href="https://github.com/GabrielSantos198" target="_blank"><i class="fa fa-github"></i></a>
-        <a href="https://www.facebook.com/gabrielsantana00" target="_blank"><i class="fab fa-facebook"></i></a>
-      </ul>
-      <article>
-        <a href="{% url 'politicas' %}">Declaração de Privacidade</a>
-        <p>Copyright ©2021 Gabriel Santana</p>  
-      </article>
-    </footer>
-
-
   </body>
+  <script src="{% static 'js/script.js' %}"></script>
 
 </html>
 

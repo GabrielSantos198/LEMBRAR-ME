@@ -5,14 +5,21 @@
 {% block content %}
 <header class="header-pag-inicial">
   <section class="secao-login">
-    <h1 class="logo">LEMBRAR-ME</h1>
+
+    <div class="container">
+        LEMBRAR-ME
+        <div class="container__side container__side--left"></div>
+        <div class="container__triangle container__triangle--left"></div>
+        <div class="container__triangle container__triangle--right"></div>
+        <div class="container__side container__side--right"></div>
+    </div>
 
     <form method="POST">
       {% csrf_token %}
       {{form}}
       <input type="submit" value="Entrar" class="enviar">
     </form>
-    <p>Não tem uma conta? <a class="cadastro" href="{% url 'cadastrar' %}">Cadastre-se</a></p>
+    <p class="fp">Não tem uma conta? <a class="cadastro" href="{% url 'cadastrar' %}">Cadastre-se</a></p>
 
     <ul>
       <p><a href="{% provider_login_url 'facebook' method='oauth2' %}"><img src="../../static/imgs/facebook.png"> Facebook</a></p>
@@ -22,10 +29,14 @@
   </section>
 </header> 
 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#003153" fill-opacity="1" d="M0,192L48,176C96,160,192,128,288,128C384,128,480,160,576,165.3C672,171,768,149,864,117.3C960,85,1056,43,1152,53.3C1248,64,1344,128,1392,160L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+</svg>
+
 <main>
   <section class="sobre-plataforma">
     <h2>PLATAFORMA</h2>
-    <p>A vida é cheia de compromissos e nem sempre conseguimos nos lembrar de todos, pensando nisso resolvi desenvolver a LEMBRAR-ME, uma plataforma online, segura e de código aberto onde você pode facilmente criar lembretes de forma organizada, para que nunca mais venha a esquecer de algo importante. E para melhor lhe atender sempre tenho buscado a inovação e o aperfeiçoamento do sistema, além de também estar disponível para tirar dúvidas e receber sugestões através das formas de contato aqui presentes.</p>
+      <p>A vida é cheia de compromissos e nem sempre conseguimos nos lembrar de todos, pensando nisso resolvi desenvolver a LEMBRAR-ME, uma plataforma online, segura e de código aberto onde você pode facilmente criar lembretes de forma organizada, para que nunca mais venha a esquecer de suas obrigações ou perder arquivos importantes em caso de danos no aparelho. E para melhor lhe atender sempre tenho buscado a inovação e o aperfeiçoamento do sistema, além de também estar sempre disponível pra tirar dúvidas e receber sugestões através das formas de contato aqui presentes. <a href="{% url 'politicas' %}">Declaração</a></p>
   </section>
 
   <article class="cards">
@@ -57,7 +68,7 @@
   <article class="desenvolvedor">
     <h1>DESENVOLVEDOR</h1>
     <img src="../../static/imgs/GabrielSantana.JPG" alt="imagem">
-    <p>Olá 👋, meu nome é <b>Gabriel Santana</b>, sou um visionário e filantropo que ama a tecnologia. Estou sempre em busca de novos desafios e formas de me aperfeiçoar. Essa plataforma online foi um dos meus muitos projetos que tive um enorme prazer e dedicação em fazer. Espero que ela sirva pros seus propósitos. E caso queira falar comigo use as formas de contato aqui presentes.</p>
+    <p>Olá 👋, meu nome é <strong>Gabriel Santana</strong>, sou um visionário e filantropo que ama a tecnologia. Estou sempre em busca de novos desafios e formas de me aperfeiçoar. Essa plataforma online foi um dos meus muitos projetos que tive um enorme prazer e dedicação em fazer. Espero que ela sirva pros seus propósitos. E caso queira falar comigo use as formas de contato aqui presentes.</p>
   </article>
 
   <article class="form-contato" id="formulario">
@@ -70,5 +81,7 @@
     </form>
   </article>
 </main>
+{% include 'rodape.html' %}
+<script src="//code-sa1.jivosite.com/widget/wC8i3Yq6bL" async></script>
 {% endblock %}
 
