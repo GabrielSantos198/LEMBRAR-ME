@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse
 from django.views.generic import ListView, DetailView, TemplateView
 from django.views.generic.edit import DeleteView, UpdateView, CreateView
 from django.utils.decorators import method_decorator
@@ -12,13 +12,17 @@ from users.models import User
 
 class Entrar(LoginView):
     template_name = 'entrar.html'
-    success_url = 'usuario/'
+
+    def get_success_url(self):
+        return reverse('usuario', kwargs={'username': self.request.user.username})
 
 
 
 class Cadastrar(SignupView):
     template_name = 'cadastrar.html'
-    success_url = '/usuario/'
+    
+    def get_success_url(self):
+        return reverse('usuario', kwargs={'username': self.request.user.username})
 
 
 

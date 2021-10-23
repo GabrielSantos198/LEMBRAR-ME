@@ -9,7 +9,7 @@
       <h1 class="ti">Configuração</h1>
 
       <nav>
-        <a href="{% url 'usuario' %}">Retornar</a>
+        <a href="{% url 'usuario' user.username %}">Retornar</a>
         <a href="{% url 'politicas' %}">Políticas</a>
         <select id="tema" onchange="FuncTema()">
             <option>Tema</option>
@@ -18,12 +18,12 @@
             <option>Em Breve...</option>
         </select>
         {% if user.has_usable_password %}
-            <a href="{% url 'alterar-senha' %}">Alterar Senha</a>
+            <a href="{% url 'alterar-senha' user.username %}">Alterar Senha</a>
         {% else %}
-            <a href="{% url 'definir-senha' %}">Definir Senha</a>
+            <a href="{% url 'definir-senha' user.username %}">Definir Senha</a>
         {% endif %}
-        <a href="{% url 'sair' %}">Sair</a>
-        <a href="{% url 'deletar-conta' user.pk %}">Deletar Conta</a>
+        <a href="{% url 'sair' user.username %}">Sair</a>
+        <a href="{% url 'deletar-conta' user.username user.pk %}">Deletar Conta</a>
       </nav>
 
   </article>

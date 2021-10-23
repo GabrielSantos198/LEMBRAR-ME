@@ -12,7 +12,7 @@
     {{form|safe}}
     <input type="submit" class="botao" value="Novo">
   </form>
-  <p class="v-p"><a href="{% url 'usuario' %}">Voltar</a></p>
+  <p class="v-p"><a href="{% url 'usuario' user.username %}">Voltar</a></p>
 </section>
 
 {% endblock%}

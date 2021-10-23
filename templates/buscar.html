@@ -3,13 +3,13 @@
 {% block content %}
 <main>
     <section class="butoes">
-        <p class="butao-conf"><a href="{% url 'confs' %}">Configuração</a></p>
-        <p class="butao-novo"><a href="{% url 'nova-anotacao' %}">Novo</a></p>
+        <p class="butao-conf"><a href="{% url 'confs' user.username %}">Configuração</a></p>
+        <p class="butao-novo"><a href="{% url 'nova-anotacao' user.username %}">Novo</a></p>
     </section>
 
     <section class="posts">
 
-        <form class="buscar" action="{% url 'buscar' %}" method="get">
+        <form class="buscar" action="{% url 'buscar' user.username %}" method="get">
             {% csrf_token %}
             <input type="search" required="required" placeholder="Buscar" name="q">
             <button><i class="fa fa-search"></i></button>
@@ -26,13 +26,13 @@
             {% for post in object_list  %}
             <section class="coluna">
                 <header class="header-posts">
-                    <h2><a href="{% url 'anotacao' post.slug %}">{{ post.titulo }}</a></h2>
+                    <h2><a href="{% url 'anotacao' user.username post.slug %}">{{ post.titulo }}</a></h2>
                     <article>
-                        <a class="editar" href="{% url 'editar-anotacao' post.slug %}"><i class="far fa-edit"></i></a>
-                        <a class="excluir" href="{% url 'excluir-anotacao' post.slug %}"><i class="far fa-trash-alt"></i></a>
+                        <a class="editar" href="{% url 'editar-anotacao' user.username post.slug %}"><i class="far fa-edit"></i></a>
+                        <a class="excluir" href="{% url 'excluir-anotacao' user.username post.slug %}"><i class="far fa-trash-alt"></i></a>
                     </article>
                 </header>
-                <p class="sumario tt">{{ post.sumario }}<a href="{% url 'anotacao' post.slug %}"> +Mais</a></p>
+                <p class="sumario tt">{{ post.sumario }}<a href="{% url 'anotacao' user.username post.slug %}"> +Mais</a></p>
             </section>
             {% endfor %}
         </section>
