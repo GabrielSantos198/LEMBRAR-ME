@@ -56,8 +56,7 @@ class Anotacao(DetailView):
 @method_decorator(login_required, name="dispatch")
 class ExcluirAnotacao(DeleteView):
     template_name = 'excluir-anotacao.html'
-    success_url = '/usuario/'
-
+    success_url = '/'
 
     def get_queryset(self):
         return Post.objects.filter(user_id=self.request.user.id)
@@ -67,7 +66,7 @@ class ExcluirAnotacao(DeleteView):
 @method_decorator(login_required, name="dispatch")
 class EditarAnotacao(UpdateView):
     template_name = 'editar-anotacao.html'
-    success_url = '/usuario/'
+    success_url = '/'
     fields = ('titulo', 'sumario', 'conteudo')
 
 
@@ -114,7 +113,7 @@ class Confs(TemplateView):
 
 class AlterarSenha(PasswordChangeView):
     template_name = 'alterar-senha.html'
-    success_url = 'sucesso'
+    success_url = '/sucesso'
     
 
 
@@ -140,7 +139,7 @@ class Politicas(TemplateView):
 
 class DefinirSenha(PasswordSetView):
     template_name = 'definir-senha.html'
-    success_url = 'sucesso'
+    success_url = '/sucesso-definicao'
     
 
 @method_decorator(login_required, name='dispatch')

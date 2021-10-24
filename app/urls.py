@@ -14,9 +14,9 @@ urlpatterns = [
     path('@<str:username>/buscar/', views.Buscar.as_view(), name='buscar'),
     path('@<str:username>/confs/', views.Confs.as_view(), name='confs'),
     path('@<str:username>/confs/alterar-senha/', views.AlterarSenha.as_view(), name='alterar-senha'),
-    path('usuario/confs/alterar-senha/sucesso/', views.Sucesso.as_view(), name='sucesso'),
+    path('sucesso/', views.Sucesso.as_view(), name='sucesso'),
     path('@<str:username>/confs/deletar-conta/<int:pk>/', views.DeletarConta.as_view(), name='deletar-conta'),
     path('politicas/', views.Politicas.as_view(), name='politicas'),
     path('@<str:username>/confs/definir-senha/', views.DefinirSenha.as_view(), name='definir-senha'),
-    path('usuario/confs/definir-senha/sucesso/', views.SucessoDefinicao.as_view(), name='sucesso-definicao'),
+    path('sucesso-definicao/', views.SucessoDefinicao.as_view(), name='sucesso-definicao'),
 ]
